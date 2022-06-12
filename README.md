@@ -1,7 +1,10 @@
 # Search
 
 search.js is a javascript framework to search strings.
-
+script src
+```
+<script src='https://baltej223.github.io/search/search.js'></script>
+```
 #### Syntax 
 search({searchData:'-',firstWordSearch:true, normalSearch:true});
 
