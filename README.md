@@ -38,3 +38,5 @@ search({normalSearch:true,searchData:'search'});
 </script>
 ```
 if the above case both the elements will be displayed.
+
+made by Baltej Singh
