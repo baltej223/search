@@ -1,4 +1,4 @@
-# search
+# Search
 
 search.js is a javascript framework to search strings.
 
