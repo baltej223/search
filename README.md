@@ -1,42 +1,40 @@
 # Search
-
-search.js is a javascript framework to search strings.
-script src
+search.js is a light weight frame work with many function to search words in strings. 
+#### How to use it ?
+Put this script link in your website's head tag.
 ```
 <script src='https://baltej223.github.io/search/search.js'></script>
 ```
 #### Syntax 
-search({searchData:'-',firstWordSearch:true, normalSearch:true});
+*search({searchData,type of search,should hide elements or not,hide another elements on behalf of another element,any function to run while searching,if to add class to specific elements});*
 
-search function needs data in the form of object. search function searchs for speific words and if the word is present in a element's inner html it will set the display of element to block and if the word will not be present in the element's inner html it will set the display of the element to none. search function will only search elements which have search-true class. Example
+**search function needs data in the form of object.**
+You can even shuffle all of these values.
+#### How it works
+This function need value in object form. It searches for specific given String in search-true elements and if the function will find that string it will do as directed. It searches the innerHTML of elements so it will work on all kind of elements.
+for example.
 ```
-<p class='search-true'>search.js is fun</p>
+<p class='search-true'>search is fun</p>
+<!-- it will only search elements which have class 'search-true' -->
 ```
+
 #### Types of searches
 there are two types of searches
 1. Normal search
-2. first word search
+2. First word search
 
-As the name suggests the Normal search searches for the word in whole string and first word search searches word only in first words.
-you have to define search type other wise it will not work. define only one.
+
+#### Normal search
+the Normal search searches for the word(given string) in whole inner html of element
 example 
 
 ```
-<p class='search-true'>search.js is fun</p> 
-<p class='search-true'>A search.js is fun</p>
-<script>
-search({firstWordSearch:true,searchData:'search'});
-</script>
-```
-in the above case only the first one will be displayed. 
-
-```
-<p class='search-true'>search.js is fun</p> 
-<p class='search-true'>A search.js is fun</p>
+<p class='search-true'>search is fun</p> <!-- displayed -->
+<p class='search-true'>ABCD search is fun</p> <!-- displayed -->
 <script>
 search({normalSearch:true,searchData:'search'});
 </script>
 ```
-if the above case both the elements will be displayed.
+if the above case both the elements will be displayed because in both the elements search word was included
 
 made by Baltej Singh
