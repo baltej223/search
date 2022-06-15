@@ -49,5 +49,34 @@ search({firstWordSearch:true,searchData:'search'});
 ```
 In the first case search was present but in the second case ABCD was present befour 'search' so second one will be hidden on search.
 #### Some important features.
+features include:
+1. hide
+2. addClass
+3. hideAnotherElement
+4. onSearch
 
-made by Baltej Singh
+#### hide
+As explaned in 'How it works' paragraph, it set diplay of an element to none, when not to show element. You can control weather to hide elemets on search or to show them. You can also add hide:true or hide:false in object which is to be passed.
+
+for example
+```
+<p class='search-true'>search is fun</p> <!-- displayed -->
+<p class='search-true'>ABCD search is fun</p> <!--displayed -->
+<script>
+search({firstWordSearch:true,searchData:'search',hide:false});
+</script>
+```
+The above code will not hide any of the element. This is useful when used with addClass feature.
+#### addClass
+addClass feature adds a class on search to only specific elements. it will add class to elements which have given searchData. 
+
+For example
+```
+<p class='search-true'>search is fun</p> <!-- displayed -->
+<p class='search-true'>ABCD search is fun</p> <!--displayed -->
+<script>
+search({firstWordSearch:true,searchData:'search',hide:false,addClass:'classname'});
+</script>
+```
+
+*Made by **Baltej Singh***
