@@ -35,6 +35,19 @@ example
 search({normalSearch:true,searchData:'search'});
 </script>
 ```
-if the above case both the elements will be displayed because in both the elements search word was included
+if the above case both the elements will be displayed because in both the elements search word was present.
+
+#### First word search
+The first word search searches for word in first words of 'search-true' elements.
+For example
+```
+<p class='search-true'>search is fun</p> <!-- displayed -->
+<p class='search-true'>ABCD search is fun</p> <!--Not displayed -->
+<script>
+search({firstWordSearch:true,searchData:'search'});
+</script>
+```
+In the first case search was present but in the second case ABCD was present befour 'search' so second one will be hidden on search.
+#### Some important features.
 
 made by Baltej Singh
