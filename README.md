@@ -72,11 +72,49 @@ addClass feature adds a class on search to only specific elements. it will add c
 
 For example
 ```
+<style>
+.classname{
+background-color:red;
+}
+</style>
+```
+```
 <p class='search-true'>search is fun</p> <!-- displayed -->
 <p class='search-true'>ABCD search is fun</p> <!--displayed -->
 <script>
 search({firstWordSearch:true,searchData:'search',hide:false,addClass:'classname'});
 </script>
 ```
+when you will run this, it will add classname class to those elements which have searchData. Add the elements which have searchData will have their background color red.
+#### hideAnotherElement
+hideAnotherElement hides another element on behalf of another element. This function is useful when your want to hide the parent element.
+```
+<div class='p'>
+<p class="search-true">Hi its me </p>
+<button>click me</button>
+</div>
+```
+if you want to hide div.p but want that it should search p.search-true then it can be done through hideAnotherElement. For example
 
-*Made by **Baltej Singh***
+```
+<div class='pa'>
+<p class="search-true">Hi its me </p>
+<button>click me</button>
+</div>
+<script>
+search({normalSearch:true,searchData:'Hi',hideAnotherElement:'pa'});
+```
+the above code will hide div.p on behalf of p.search-true
+#### onSearch
+onSearch can run a function **while** searching. It is not a callback function. for exaple
+```
+<p class="search-true">Hi its me </p>
+<script>
+search({normalSearch:true,searchData:'Hi',onSearch:function(){
+console.log('Hi');
+}});
+```
+it will run the given function with ease. 
+<hr> 
+
+### Made by Baltej Singh
