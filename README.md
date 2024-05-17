@@ -106,7 +106,7 @@ search({normalSearch:true,searchData:'Hi',hideAnotherElement:'pa'});
 ```
 the above code will hide div.p on behalf of p.search-true
 #### onSearch
-onSearch can run a function **while** searching. It is not a callback function. for exaple
+onSearch can run a function **while** searching. It is not a callback function. for example
 ```
 <p class="search-true">Hi its me </p>
 <script>
@@ -114,7 +114,10 @@ search({normalSearch:true,searchData:'Hi',onSearch:function(){
 console.log('Hi');
 }});
 ```
-it will run the given function with ease. 
+```
+Note: If function like alert() is used here, it case cause page to stop loading which can give user a bad experience, So use accordingly.
+
+``` 
 <hr> 
 
 ### Made by Baltej Singh
